@@ -33,7 +33,9 @@ class App extends React.Component {
             <input id="Label-list" type="text" onChange={this.handleChange}/>
           </label>
           <ul className="Color-list">
-            {colors.map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li>)}
+            {colors
+            .filter((item) => item.color === this.state.inputValue)
+            .map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li>)}
           </ul>
         </div>
       </div>
