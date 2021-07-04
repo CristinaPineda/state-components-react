@@ -10,7 +10,14 @@ class App extends React.Component {
     this.state ={
       inputValue: '',
     }
+
+    this.handleChange = this.handleChange.bind(this);
+
   }
+
+    handleChange(e) {
+      this.setState( {inputValue: e.target.value});
+    }
 
   render() {
     return (
@@ -23,7 +30,7 @@ class App extends React.Component {
         <div className="Select-colors">
           <label htmlFor="Label-list">
             Enter a Color
-            <input id="Label-list" type="text" onChange={() => {}}/>
+            <input id="Label-list" type="text" onChange={this.handleChange}/>
           </label>
           <ul className="Color-list">
             {colors.map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li>)}
