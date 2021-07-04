@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-// import colors from './data';
+import colors from './data';
 
 function App() {
   // constructor() {
@@ -15,15 +15,15 @@ function App() {
         <p>Colors Selector</p>
         <hr className="hr"></hr>
       </header>
-      {/* <div className="Select-colors">
-      <label htmlFor="Label-list">
+      <div className="Select-colors">
+      {/* <label htmlFor="Label-list">
         Enter a Color
           <input id="Label-list" type="text" onChange={() => {}}/>
-        </label>
+        </label> */}
         <ul className="Color-list">
           {colors.map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li>)}
         </ul>
-      </div> */}
+      </div>
     </div>
   );
 }
