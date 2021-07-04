@@ -20,6 +20,7 @@ class App extends React.Component {
     }
 
   render() {
+    const { inputValue } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -34,8 +35,8 @@ class App extends React.Component {
           </label>
           <ul className="Color-list">
             {colors
-            .filter((item) => item.color === this.state.inputValue)
-            .map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li>)}
+            .filter((item) => item.color.includes(inputValue))
+            .map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li> )}
           </ul>
         </div>
       </div>
