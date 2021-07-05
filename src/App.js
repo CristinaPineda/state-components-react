@@ -26,20 +26,21 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Colors Selector</p>
-          <hr className="hr" />
         </header>
         <div className="Select-colors">
           <div className="Div-label">
+            <hr className="hr" />
             <label htmlFor="Label-list">
               Enter a Color: 
               <input id="Label-list" type="text" onChange={this.handleChange}/>
             </label>
+            <hr className="hr" />
           </div>
           <ul className="Color-list">
             {colors
             .filter((item) => item.color.includes(inputValue))
             .map((color) => 
-            <li className="Color-item" key={color.value}>
+            <li className="Color-item" key={color.value} style={{color: color.color}}>
               <div 
                 style={{ background: color.value }}
                 className="Color-container"

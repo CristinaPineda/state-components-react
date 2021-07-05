@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 30vmin;
+  height: 40vmin;
   pointer-events: none;
 }
 
@@ -42,7 +42,12 @@
 }
 
 .Div-label {
-  margin: 20px;
+  padding: 20px;
+  background-color: #282c33;
+}
+
+label {
+  color: #61dafb;
 }
 
 #Label-list {
@@ -58,7 +63,6 @@
 }
 
 .Color-list {
-  margin: auto;
   text-align: left;
   margin-left: 30%;
 }

@@ -27,6 +27,7 @@ const colors = [
       color: "black",
       value: "#000"
     }
+    
   ];
   
   export default colors;
