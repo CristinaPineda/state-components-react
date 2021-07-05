@@ -40,7 +40,10 @@ class App extends React.Component {
             .filter((item) => item.color.includes(inputValue))
             .map((color) => 
             <li className="Color-item" key={color.value}>
-              <div className="Color-container"/>
+              <div 
+                style={{ background: color.value }}
+                className="Color-container"
+              />
               {color.color} - {color.value}</li> )}
           </ul>
         </div>
