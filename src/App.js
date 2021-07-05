@@ -29,14 +29,19 @@ class App extends React.Component {
           <hr className="hr" />
         </header>
         <div className="Select-colors">
-          <label htmlFor="Label-list">
-            Enter a Color
-            <input id="Label-list" type="text" onChange={this.handleChange}/>
-          </label>
+          <div className="Div-label">
+            <label htmlFor="Label-list">
+              Enter a Color: 
+              <input id="Label-list" type="text" onChange={this.handleChange}/>
+            </label>
+          </div>
           <ul className="Color-list">
             {colors
             .filter((item) => item.color.includes(inputValue))
-            .map((color) => <li className="Color-item" key={color.value}>{color.color} - {color.value}</li> )}
+            .map((color) => 
+            <li className="Color-item" key={color.value}>
+              <div className="Color-container"/>
+              {color.color} - {color.value}</li> )}
           </ul>
         </div>
       </div>

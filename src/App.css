@@ -40,3 +40,31 @@
 .hr {
   width: 500px;
 }
+
+.Div-label {
+  margin: 20px;
+}
+
+#Label-list {
+  margin-left: 20px;
+}
+
+.Color-container {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.Color-list {
+  margin: auto;
+  text-align: left;
+  margin-left: 30%;
+}
+
+.Color-item {
+  list-style: none;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
